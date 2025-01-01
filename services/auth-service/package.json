@@ -1,0 +1,27 @@
+{
+  "name": "auth-service",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "build": "tsc && xcopy /E /I /H /Y src\\proto dist\\proto",
+    "start": "npm run build && node dist/app.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/app.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.12.5",
+    "@grpc/proto-loader": "^0.7.13",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "ts-node-dev": "^2.0.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
+  }
+}
